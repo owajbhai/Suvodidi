@@ -269,13 +269,13 @@ Nᴀᴍᴇ - {}
     PREMIUM_TEXT = """<blockquote>🎖️ <b>ᴀᴠᴀɪʟᴀʙʟᴇ ᴘʟᴀɴs</b></blockquote>
 
 ◉ 07 ᴅᴀʏꜱ - 15 ₹
-◉ 15 ᴅᴀʏꜱ - 30 ₹
-◉ 01 ᴍᴏɴᴛʜꜱ - 60 ₹
-◉ 02 ᴍᴏɴᴛʜꜱ - 120 ₹
-◉ 03 ᴍᴏɴᴛʜꜱ - 220 ₹
+◉ 15 ᴅᴀʏꜱ - 20 ₹
+◉ 01 ᴍᴏɴᴛʜꜱ - 30 ₹
+◉ 02 ᴍᴏɴᴛʜꜱ - 50 ₹
+◉ 03 ᴍᴏɴᴛʜꜱ - 80 ₹
 
 •─────•─────────•─────•
-💵 ᴜᴘɪ ɪᴅ - ⚠️ <b><u>ᴛʜɪꜱ ꜱᴇʀᴠɪᴄᴇ ɪꜱ ᴛᴇᴍᴘᴏʀᴀʀʏ ᴄʟᴏꜱᴇᴅ.</u></b>
+💵 ᴜᴘɪ ɪᴅ - sarifwaj@ybl⚠️ <b><u>ᴛʜɪꜱ ꜱᴇʀᴠɪᴄᴇ ɪꜱ ᴛᴇᴍᴘᴏʀᴀʀʏ ᴄʟᴏꜱᴇᴅ.</u></b>
 
 🏷️ <a href='https://t.me/+blcE2jS-iGtkMjNl'>ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ ᴘʀᴏᴏꜰ</a>
 
@@ -311,7 +311,7 @@ Nᴀᴍᴇ : {}
 
 Mᴇꜱꜱᴀɢᴇ : <b>{}</b>"""
     
-    CAPTION = """<b><a href="https://t.me/SilentXBotz">{file_name}</a></b>\n\n<b>⚜️ Powered By : <a https://t.me/SilentXBotz>[SilentXBotz]</a></b>"""
+    CAPTION = """<b><a href="https://t.me/botmaster55">{file_name}</a></b>\n\n<b>⚜️ Powered By : <a https://t.me/botmaster55>[SilentXBotz]</a></b>"""
 
     IMDB_TEMPLATE_TXT = """
 <b>🏷 Title</b>: <a href={url}>{title}</a>
