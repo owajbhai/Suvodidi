@@ -134,9 +134,9 @@ else:
     ON_HEROKU = False
 HAS_SSL = bool(getenv('HAS_SSL', True))
 if HAS_SSL:
-    URL = "https://anonymous-bot-nb.onrender.com".format(FQDN)
+    URL = "https://anonymous-bot-nb.onrender.com/".format(FQDN)
 else:
-    URL = "https://anonymous-bot-nb.onrender.com".format(FQDN)
+    URL = "https://anonymous-bot-nb.onrender.com/".format(FQDN)
 
 
 REACTIONS = ["🤝", "😇", "🤗", "😍", "👍", "🎅", "😐", "🥰", "🤩", "😱", "🤣", "😘", "👏", "😛", "😈", "🎉", "⚡️", "🫡", "🤓", "😎", "🏆", "🔥", "🤭", "🌚", "🆒", "👻", "😁"]
