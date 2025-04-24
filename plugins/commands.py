@@ -25,7 +25,7 @@ logging.basicConfig(level=logging.ERROR)
 logger = logging.getLogger(__name__)
 
 TIMEZONE = "Asia/Kolkata"
-BATCH_FILES = {}
+BATCH_FILES = {}  
 
 @Client.on_message(filters.command("start") & filters.incoming)
 async def start(client, message):
@@ -162,53 +162,56 @@ async def start(client, message):
 
     try:
         settings = await get_settings(int(data.split("_", 2)[1]))
-        if settings.get('fsub_id', AUTH_CHANNEL) == AUTH_REQ_CHANNEL:
-            if AUTH_REQ_CHANNEL and not await is_req_subscribed(client, message):
-                try:
-                    invite_link = await client.create_chat_invite_link(int(AUTH_REQ_CHANNEL), creates_join_request=True)
-                except ChatAdminRequired:
-                    logger.error("Make sure Bot is admin in Forcesub channel")
-                    return
-                btn = [[
-                    InlineKeyboardButton("⛔️ ᴊᴏɪɴ ɴᴏᴡ ⛔️", url=invite_link.invite_link)
-                ]]
-                if message.command[1] != "subscribe":
-                    btn.append([InlineKeyboardButton("♻️ ᴛʀʏ ᴀɢᴀɪɴ ♻️", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
-                await client.send_photo(
-                    chat_id=message.from_user.id,
-                    photo=random.choice(FSUB_IMG),
-                    caption=script.FORCESUB_TEXT,
-                    reply_markup=InlineKeyboardMarkup(btn),
-                    parse_mode=enums.ParseMode.HTML,
-                    reply_to_message_id=message.id
-                )
+        main_channel = int(settings.get('fsub_id', AUTH_CHANNEL))
+        btn = []
+
+        
+        if not await is_subscribed(client, message.from_user.id, main_channel):
+            try:
+                invite_main = await client.create_chat_invite_link(main_channel)
+                btn.append([InlineKeyboardButton("⛔️ ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ 1 ⛔️", url=invite_main.invite_link)])
+            except ChatAdminRequired:
+                logger.error("Make sure Bot is admin in Main Channel (fsub_id)")
                 return
-        else:
-            id = settings.get('fsub_id', AUTH_CHANNEL)
-            channel = int(id)
-            btn = []
-            if channel != AUTH_CHANNEL and not await is_subscribed(client, message.from_user.id, channel):
-                invite_link_custom = await client.create_chat_invite_link(channel)
-                btn.append([InlineKeyboardButton("⛔️ ᴊᴏɪɴ ɴᴏᴡ ⛔️", url=invite_link_custom.invite_link)])
-            
-            if not await is_req_subscribed(client, message):
-                invite_link_default = await client.create_chat_invite_link(int(AUTH_CHANNEL), creates_join_request=True)
-                btn.append([InlineKeyboardButton("⛔️ ᴊᴏɪɴ ɴᴏᴡ ⛔️", url=invite_link_default.invite_link)])
-            
-            if message.command[1] != "subscribe" and (await is_req_subscribed(client, message) is False or await is_subscribed(client, message.from_user.id, channel) is False):
-                btn.append([InlineKeyboardButton("♻️ ᴛʀʏ ᴀɢᴀɪɴ ♻️", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
-            if btn:
-                await client.send_photo(
-                    chat_id=message.from_user.id,
-                    photo=random.choice(FSUB_IMG),
-                    caption=script.FORCESUB_TEXT,
-                    reply_markup=InlineKeyboardMarkup(btn),
-                    parse_mode=enums.ParseMode.HTML,
-                    reply_to_message_id=message.id
-                )
+
+        
+        if not await is_subscribed(client, message.from_user.id, EXTRA_CHANNEL):
+            try:
+                invite_extra = await client.create_chat_invite_link(EXTRA_CHANNEL)
+                btn.append([InlineKeyboardButton("⛔️ ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ 2 ⛔️", url=invite_extra.invite_link)])
+            except ChatAdminRequired:
+                logger.error("Make sure Bot is admin in EXTRA_CHANNEL")
                 return
-    except Exception as n:
-        print(f"Error In Fsub :- {n}")
+
+        
+        if not await is_subscribed(client, message.from_user.id, EXTRA_CHANNELP):
+            try:
+                invite_extra_p = await client.create_chat_invite_link(EXTRA_CHANNELP)
+                btn.append([InlineKeyboardButton("⛔️ ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ 3 ⛔️", url=invite_extra_p.invite_link)])
+            except ChatAdminRequired:
+                logger.error("Make sure Bot is admin in EXTRA_CHANNELP")
+                return
+
+        
+        if btn and message.command[1] != "subscribe":
+            btn.append([InlineKeyboardButton("♻️ ᴛʀʏ ᴀɢᴀɪɴ ♻️", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
+
+        
+        if btn:
+            await client.send_photo(
+                chat_id=message.from_user.id,
+                photo=random.choice(FSUB_IMG),
+                caption=script.FORCESUB_TEXT,
+                reply_markup=InlineKeyboardMarkup(btn),
+                parse_mode=enums.ParseMode.HTML,
+                reply_to_message_id=message.id
+            )
+            return
+
+    except Exception as e:
+        await log_error(client, f"Got Error In Force Subscription Function.\n\n Error - {e}")
+        print(f"Error In Fsub :- {e}")
+        
 
     user_id = m.from_user.id
     if not await db.has_premium_access(user_id):
