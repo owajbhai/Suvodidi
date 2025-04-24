@@ -28,13 +28,15 @@ MELCOW_VID = environ.get("MELCOW_VID", "https://graph.org/file/e215d12bfd4fa2155
 SPELL_IMG = environ.get("SPELL_IMG", "https://graph.org/file/13702ae26fb05df52667c.jpg")
 SUBSCRIPTION = (environ.get('SUBSCRIPTION', 'https://i.ibb.co/W48GD6QF/14a58a280a61.jpg'))
 FSUB_IMG = (environ.get('FSUB_IMG', 'https://i.ibb.co/cShkPjcZ/x.jpg')).split() 
-
+EXTRA_CHANNEL = int(os.environ.get("EXTRA_CHANNEL", "-1002294203953"))
+EXTRA_CHANNELP = int(os.environ.get("EXTRA_CHANNELP", "-1002486384026"))
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1249672673').split()] 
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001860172104').split()]
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001860172104'))  
 BIN_CHANNEL = int(environ.get('BIN_CHANNEL', '-1001860172104'))  
 MOVIE_UPDATE_CHANNEL = int(environ.get('MOVIE_UPDATE_CHANNEL', '-1002294203953'))  
 PREMIUM_LOGS = int(environ.get('PREMIUM_LOGS', '-1002046895970')) 
+
 auth_grp = environ.get('AUTH_GROUP')
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 reqst_channel = environ.get('REQST_CHANNEL_ID', '-1002463463002') 
