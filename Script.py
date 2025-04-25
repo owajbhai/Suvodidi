@@ -315,7 +315,7 @@ Nᴀᴍᴇ : {}
 
 Mᴇꜱꜱᴀɢᴇ : <b>{}</b>"""
     
-    CAPTION = """<b><a href="https://t.me/botmaster55">{file_name}</a></b>\n\n<b>⚜️ Powered By : <a https://t.me/botmaster55>[SilentXBotz]</a></b>"""
+    CAPTION = """<b><a href="https://t.me/+DNAqhKkpTf0zYTI1">{file_name}</a></b>\n\n<b>⚜️ 𝐃𝐞𝐯𝐥𝐨𝐩𝐞𝐫 : <a @https://t.me/+DNAqhKkpTf0zYTI1>[@Prime_Movie_Request_bot]</a></b>"""
 
     IMDB_TEMPLATE_TXT = """
 <b>🏷 Title</b>: <a href={url}>{title}</a>
