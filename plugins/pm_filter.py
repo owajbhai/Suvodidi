@@ -29,11 +29,6 @@ from database.gfilters_mdb import (
     get_gfilters,
     del_allg
 )
-
-import os
-
-req_channel = int(os.environ.get('REQ_CHANNAL','-1001937259467'))
-
 import logging
 from urllib.parse import quote_plus
 from Lucia.util.file_properties import get_name, get_hash, get_media_file_size
@@ -1629,7 +1624,6 @@ async def auto_filter(client, msg, spoll=False):
             files, offset, total_results = await get_search_results(message.chat.id ,search, offset=0, filter=True)
             settings = await get_settings(message.chat.id)
             if not files:
-                await client.send_message(req_channel,f"#REQUESTED_LOGS \n\n**CONTENT NAME:**'{search}' \n**REQUEST BY:**{message.form_user.first_name}\n**USER ID :**{message.from_user.id}"reply_markup=INlineKeyboardMarkup([[InlineKeyBoradButton("💥 Mark Us Done 💥", callback_data="close_data")]]))
                 if settings["spell_check"]:
                     ai_sts = await m.edit('🤖 ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ, ᴀɪ ɪꜱ ᴄʜᴇᴄᴋɪɴɢ ʏᴏᴜʀ ꜱᴘᴇʟʟɪɴɢ...')
                     is_misspelled = await ai_spell_check(chat_id = message.chat.id,wrong_name=search)
