@@ -64,14 +64,15 @@ async def give_filter(client, message):
         if manual == False:
             settings = await get_settings(message.chat.id)
             if settings['auto_ffilter']:
-                if not user_id:
+                await auto_filter(client, message)
+                #if not user_id:
                     #await message.reply("<b>🚨 ɪ'ᴍ ɴᴏᴛ ᴡᴏʀᴋɪɴɢ ғᴏʀ ᴀɴᴏɴʏᴍᴏᴜꜱ ᴀᴅᴍɪɴ!</b>")
-                    return
-            if 'hindi' in message.text.lower() or 'tamil' in message.text.lower() or 'telugu' in message.text.lower() or 'malayalam' in message.text.lower() or 'kannada' in message.text.lower() or 'english' in message.text.lower() or 'gujarati' in message.text.lower(): 
-                return await auto_filter(client, message)
+                   # return
+           # if 'hindi' in message.text.lower() or 'tamil' in message.text.lower() or 'telugu' in message.text.lower() or 'malayalam' in message.text.lower() or 'kannada' in message.text.lower() or 'english' in message.text.lower() or 'gujarati' in message.text.lower(): 
+             #   return await auto_filter(client, message)
 
-            elif message.text.startswith("/"):
-                return
+          #  elif message.text.startswith("/"):
+         #       return
         
             elif re.findall(r'https?://\S+|www\.\S+|t\.me/\S+', message.text):
                 if await is_check_admin(client, message.chat.id, message.from_user.id):
