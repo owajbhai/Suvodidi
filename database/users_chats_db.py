@@ -327,6 +327,26 @@ class Database:
         await self.users.update_one({"id": user_id}, {"$set": user_data}, upsert=True)
 
     async def all_premium_users(self):
+        async def check_daily_limit(self, user_id: int, limit: int = 5) -> bool:
+        if await self.has_premium_access(user_id):
+            return True
+
+        today = datetime.datetime.utcnow().date().isoformat()
+        collection = self.db.limits
+        record = await collection.find_one({"_id": user_id})
+
+        if record:
+            if record.get("date") == today:
+                if record.get("count", 0) >= limit:
+                    return False
+                else:
+                    await collection.update_one({"_id": user_id}, {"$inc": {"count": 1}})
+            else:
+                await collection.update_one({"_id": user_id}, {"$set": {"date": today, "count": 1}})
+        else:
+            await collection.insert_one({"_id": user_id, "date": today, "count": 1})
+
+        return True
         count = await self.users.count_documents({
         "expiry_time": {"$gt": datetime.datetime.now()}
         })
