@@ -36,6 +36,10 @@ LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001860172104'))
 BIN_CHANNEL = int(environ.get('BIN_CHANNEL', '-1001860172104'))  
 MOVIE_UPDATE_CHANNEL = int(environ.get('MOVIE_UPDATE_CHANNEL', '-1002314687215'))  
 PREMIUM_LOGS = int(environ.get('PREMIUM_LOGS', '-1002046895970')) 
+# lock file, set file limit 
+FILE_LIMITE = int(environ.get('FILE_LIMITE', 15))
+SEND_ALL_LIMITE = int(environ.get('SEND_ALL_LIMITE', 3))
+LIMIT_MODE = is_enabled((environ.get('LIMIT_MODE', 'True')), False)
 
 auth_grp = environ.get('AUTH_GROUP')
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
