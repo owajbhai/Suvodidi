@@ -1242,19 +1242,35 @@ async def cb_handler(client: Client, query: CallbackQuery):
             fileName = {quote_plus(get_name(silent_msg))}
             silent_stream = f"{URL}watch/{str(silent_msg.id)}/{quote_plus(get_name(silent_msg))}?hash={get_hash(silent_msg)}"
             silent_download = f"{URL}{str(silent_msg.id)}/{quote_plus(get_name(silent_msg))}?hash={get_hash(silent_msg)}"
+            buttons = get_premium_buttons(user, silent_download, silent_stream)
             await silent_msg.reply_text(
                 text=f"•• ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ꜰᴏʀ ɪᴅ #{user_id} \n•• ᴜꜱᴇʀɴᴀᴍᴇ : {username} \n\n•• ᖴᎥᒪᗴ Nᗩᗰᗴ : {fileName}",
                 quote=True,
-                disable_web_page_preview=True,
-                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🚀 Fast Download 🚀", url=silent_download),  # we download Link
-                                                    InlineKeyboardButton('🖥️ Watch online 🖥️', url=silent_stream)]])  # web stream Link
+                disable_web_page_preview=True, reply_markup=buttons
+                def get_premium_buttons(user, download_url, stream_url):
+    if user and user.is_premium:
+        return InlineKeyboardMarkup([
+            [
+                InlineKeyboardButton("🚀 Fast Download 🚀", url=download_url),
+                InlineKeyboardButton("🖥️ Watch online 🖥️", url=stream_url)
+            ]
+        ])
+    return None  # web stream Link
             )
+            buttons = get_premium_buttons(user, silent_download, silent_stream)
             SilentXBotz = await query.message.reply_text(
                 text="•• ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ☠︎⚔",
                 quote=True,
-                disable_web_page_preview=True,
-                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🚀 Fast Download 🚀", url=silent_download),  # we download Link
-                                                    InlineKeyboardButton('🖥️ Watch online 🖥️', url=silent_stream)]])  # web stream Link
+                disable_web_page_preview=True, reply_markup=buttons
+                def get_premium_buttons(user, download_url, stream_url):
+    if user and user.is_premium:
+        return InlineKeyboardMarkup([
+            [
+                InlineKeyboardButton("🚀 Fast Download 🚀", url=download_url),
+                InlineKeyboardButton("🖥️ Watch online 🖥️", url=stream_url)
+            ]
+        ])
+    return None  # web stream Link
             )              
             await asyncio.sleep(DELETE_TIME) 
             await SilentXBotz.delete()
