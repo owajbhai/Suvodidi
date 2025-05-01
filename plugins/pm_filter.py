@@ -1305,7 +1305,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 text=f"•• ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ꜰᴏʀ ɪᴅ #{user_id} \n•• ᴜꜱᴇʀɴᴀᴍᴇ : {username} \n\n•• ᖴᎥᒪᗴ Nᗩᗰᗴ : {fileName}",
                 quote=True,
                 disable_web_page_preview=True, reply_markup=buttons
-                def get_premium_buttons(user, download_url, stream_url):
+                # Pehle function ko upar define karo
+def get_premium_buttons(user, download_url, stream_url):
     if user and user.is_premium:
         return InlineKeyboardMarkup([
             [
@@ -1313,14 +1314,37 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 InlineKeyboardButton("🖥️ Watch online 🖥️", url=stream_url)
             ]
         ])
-    return None  # web stream Link
+    return None  # Agar premium nahi hai to koi buttons nahi
+
+# Phir aapka main kaam ka code
+try:
+    silent_stream = f"{URL}watch/{str(silent_msg.id)}/{quote_plus(get_name(silent_msg))}?hash={get_hash(silent_msg)}"
+    silent_download = f"{URL}{str(silent_msg.id)}/{quote_plus(get_name(silent_msg))}?hash={get_hash(silent_msg)}"
+    buttons = get_premium_buttons(user, silent_download, silent_stream)
+
+    await silent_msg.reply_text(
+        text=f"•• link generate hua user id #{user_id} \n•• username : {username} \n\n•• File Name : {fileName}",
+        quote=True,
+        disable_web_page_preview=True,
+        reply_markup=buttons
+    )
+
+    await asyncio.sleep(DELETE_TIME)
+    await silent_msg.delete()
+    return
+
+except Exception as e:
+    print(e)
+    await query.answer(f"⚠️ Kuch galat ho gaya \n\n{e}", show_alert=True)
+    return
             )
             buttons = get_premium_buttons(user, silent_download, silent_stream)
             SilentXBotz = await query.message.reply_text(
                 text="•• ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ☠︎⚔",
                 quote=True,
                 disable_web_page_preview=True, reply_markup=buttons
-                def get_premium_buttons(user, download_url, stream_url):
+                # Pehle function ko upar define karo
+def get_premium_buttons(user, download_url, stream_url):
     if user and user.is_premium:
         return InlineKeyboardMarkup([
             [
@@ -1328,8 +1352,29 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 InlineKeyboardButton("🖥️ Watch online 🖥️", url=stream_url)
             ]
         ])
-    return None  # web stream Link
-            )              
+    return None  # Agar premium nahi hai to koi buttons nahi
+
+# Phir aapka main kaam ka code
+try:
+    silent_stream = f"{URL}watch/{str(silent_msg.id)}/{quote_plus(get_name(silent_msg))}?hash={get_hash(silent_msg)}"
+    silent_download = f"{URL}{str(silent_msg.id)}/{quote_plus(get_name(silent_msg))}?hash={get_hash(silent_msg)}"
+    buttons = get_premium_buttons(user, silent_download, silent_stream)
+
+    await silent_msg.reply_text(
+        text=f"•• link generate hua user id #{user_id} \n•• username : {username} \n\n•• File Name : {fileName}",
+        quote=True,
+        disable_web_page_preview=True,
+        reply_markup=buttons
+    )
+
+    await asyncio.sleep(DELETE_TIME)
+    await silent_msg.delete()
+    return
+
+except Exception as e:
+    print(e)
+    await query.answer(f"⚠️ Kuch galat ho gaya \n\n{e}", show_alert=True)
+    return              
             await asyncio.sleep(DELETE_TIME) 
             await SilentXBotz.delete()
             return            
