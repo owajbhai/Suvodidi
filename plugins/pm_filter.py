@@ -32,7 +32,7 @@ from database.gfilters_mdb import (
 
 import os
 
-req_channel = int(os.environ.get('REQ_CHANNAL','-1002294203953'))
+req_channel = int(os.environ.get('REQ_CHANNAL','-1002580860502'))
 
 import logging
 from urllib.parse import quote_plus
