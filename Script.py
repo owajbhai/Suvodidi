@@ -315,15 +315,9 @@ Nᴀᴍᴇ : {}
 
 Mᴇꜱꜱᴀɢᴇ : <b>{}</b>"""
     
-    CAPTION = """📂 <b>Filename:</b> <a href='https://t.me/MovieSearchAutoGroup'>{file_name}</a>
-sɪᴢᴇ ⚙️: {file_size}
-•────•────✦✗✦───•────•
-📌 <b>ʀᴇǫᴜᴇsᴛ ɢʀᴏᴜᴘ :➠</b> <a href='https://t.me/+aAmjR1AgZmRlOGJl'>ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ᴊᴏɪɴ ✨</a>
-🎬 <b>ᴍᴏᴠɪᴇs ᴄʜᴀɴɴᴇʟ :➠</b> <a href='https://t.me/MOVIES_WORLDZSS'>ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ᴊᴏɪɴ ♨️</a>
-•────•────✦✗✦───•────•
+    /set_caption 📂Fɪʟᴇɴᴀᴍᴇ :<b><a href="https://t.me/MovieSearchAutoGroup">{file_name}</a></b>
 
-<b>©️ ᴘᴏᴡᴇʀᴇᴅ ʙʏ :</b> <a href='https://t.me/MOVIES_WORLDZSS'>ᴘʀɪᴍᴇ ʙᴏᴛᴢ</a>
-"""
+⚜️ 𝑷𝒐𝒘𝒆𝒓𝒆𝒅 𝑩𝒚➥ 「<a href="https://t.me/MovieSearchAutoGroup"Naam acchawala</a>」
 
     IMDB_TEMPLATE_TXT = """
 <b>🏷 Title</b>: <a href={url}>{title}</a>
