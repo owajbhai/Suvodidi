@@ -56,7 +56,7 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'SilentXBotz_files')
 MULTIPLE_DB = is_enabled(os.environ.get('MULTIPLE_DB', "True"), True) # Type True For Turn On MULTIPLE DB FUNTION 
 DATABASE_URI2 = environ.get('DATABASE_URI2', "")
 
-GRP_LNK = environ.get('GRP_LNK', 'https://t.me/MovieSearchAutoGroup')
+GRP_LNK = environ.get('GRP_LNK', 'https://t.me/Prime_Movie_YT_Group')
 CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/+iXwNgNXtOkk1OTVl')
 OWNER_LNK = environ.get('OWNER_LNK', 'https://t.me/+aAmjR1AgZmRlOGJl')
 UPDATE_CHANNEL_LNK = environ.get('UPDATE_CHANNEL_LNK', 'https://t.me/+iXwNgNXtOkk1OTVl')
