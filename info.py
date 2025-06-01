@@ -22,10 +22,10 @@ BOT_TOKEN = environ.get('BOT_TOKEN', "7564758499:AAGVLTDdvTd10VnOKJRh_WDvR7y6yoH
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 
-PICS = (environ.get('PICS', 'https://i.ibb.co/DfZdChRh/d1d1e92a5622.jpg')).split() 
+PICS = (environ.get('PICS', 'https://i.ibb.co/cKndCq8t/a7949fcd572c.jpg')).split() 
 NOR_IMG = environ.get("NOR_IMG", "https://i.ibb.co/DfZdChRh/d1d1e92a5622.jpg")
 MELCOW_VID = environ.get("MELCOW_VID", "https://i.ibb.co/DfZdChRh/d1d1e92a5622.jpg")
-SPELL_IMG = environ.get("SPELL_IMG", "https://i.ibb.co/DfZdChRh/d1d1e92a5622.jpg")
+SPELL_IMG = environ.get("SPELL_IMG", "https://i.ibb.co/cKndCq8t/a7949fcd572c.jpg")
 SUBSCRIPTION = (environ.get('SUBSCRIPTION', 'https://i.ibb.co/DfZdChRh/d1d1e92a5622.jpg'))
 FSUB_IMG = (environ.get('FSUB_IMG', 'https://i.ibb.co/DfZdChRh/d1d1e92a5622.jpg')).split() 
 EXTRA_CHANNEL = int(os.environ.get("EXTRA_CHANNEL", "-1002393222606"))
@@ -140,9 +140,9 @@ else:
     ON_HEROKU = False
 HAS_SSL = bool(getenv('HAS_SSL', True))
 if HAS_SSL:
-    URL = "https://dull-sacha-wajshaikh-e5db738c.koyeb.app/".format(FQDN)
+    URL = "https://resident-datha-newbot099-c49ce522.koyeb.app/".format(FQDN)
 else:
-    URL = "https://dull-sacha-wajshaikh-e5db738c.koyeb.app/".format(FQDN)
+    URL = "https://resident-datha-newbot099-c49ce522.koyeb.app/".format(FQDN)
 
 
 REACTIONS = ["🤝", "😇", "🤗", "😍", "👍", "🎅", "😐", "🥰", "🤩", "😱", "🤣", "😘", "👏", "😛", "😈", "🎉", "⚡️", "🫡", "🤓", "😎", "🏆", "🔥", "🤭", "🌚", "🆒", "👻", "😁"]
