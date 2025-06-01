@@ -315,11 +315,11 @@ Nᴀᴍᴇ : {}
 
 Mᴇꜱꜱᴀɢᴇ : <b>{}</b>"""
     
-    CAPTION = """📂 <b>Filename:</b> <a href='https://t.me/ovieSearchAutoGroup'>{file_name}</a>
+    CAPTION = """📂 <b>Filename:</b> <a href='https://t.me/movieSearchAutoGroup'>{file_name}</a>
 sɪᴢᴇ ⚙️: {file_size}
 •────•────✦✗✦───•────•
-📌 <b>ʀᴇǫᴜᴇsᴛ ɢʀᴏᴜᴘ :➠</b> <a href='https://t.me/aAmjR1AgZmRlOGJl'>ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ᴊᴏɪɴ ✨</a>
-🎬 <b>ᴍᴏᴠɪᴇs ᴄʜᴀɴɴᴇʟ :➠</b> <a href='https://t.me/+XwNgNXtOkk1OTVl'>ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ᴊᴏɪɴ ♨️</a>
+📌 <b>ʀᴇǫᴜᴇsᴛ ɢʀᴏᴜᴘ :➠</b> <a href='https://t.me/+aAmjR1AgZmRlOGJl'>ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ᴊᴏɪɴ ✨</a>
+🎬 <b>ᴍᴏᴠɪᴇs ᴄʜᴀɴɴᴇʟ :➠</b> <a href='https://t.me/MOVIES_WORLDZSS'>ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ᴊᴏɪɴ ♨️</a>
 •────•────✦✗✦───•────•
 <b>©️ 18+ Video 👉:</b> <a href='https://t.me/Adultjon1_bot'>18+ Video free</a>
 """
