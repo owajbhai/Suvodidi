@@ -309,13 +309,15 @@ Nᴀᴍᴇ : {}
 
 Mᴇꜱꜱᴀɢᴇ : <b>{}</b>"""
     
-    CAPTION = """📂 <b>Filename:</b> <a href='https://t.me/+0FJKbf5PpWs1MTY1'>{file_name}</a>
+    CAPTION = """📂 <b>Filename:</b> <a href='https://t.me/+nWO5zmA2qxsyMjQ1'>{file_name}</a>
 sɪᴢᴇ ⚙️: {file_size}
 •────•────✦✗✦───•────•
-📌 <b>ʀᴇǫᴜᴇsᴛ ɢʀᴏᴜᴘ :➠</b> <a href='https://t.me/movie_Golden'>ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ᴊᴏɪɴ ✨</a>
-🎬 <b>ᴍᴏᴠɪᴇs ᴄʜᴀɴɴᴇʟ :➠</b> <a href='https://t.me/MOVIES_WORLDZSS'>ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ᴊᴏɪɴ ♨️</a>
+📌 <b>𝖡𝖮𝖳 𝖣𝖤𝖵𝖫𝖮𝖯𝖤𝖱 :➠</b> <a href='https://t.me/botmaster55'>ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ᴊᴏɪɴ ✨</a>
+🎬 <b>ᴍᴏᴠɪᴇs ᴄʜᴀɴɴᴇʟ :➠</b> <a href='https://t.me/MOVEGOLDEN10'>ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ᴊᴏɪɴ ♨️</a>
 •────•────✦✗✦───•────•
-<b>©️ 18+ 𝙑𝙄𝘿𝙀𝙊 𝙇𝙀𝘼𝙆🔞 👉:</b> <a href='https://t.me/saktiman55'>18+ Video free</a>
+🎬 <b>🔞𝙇𝙀𝘼𝙆 𝙑𝙄𝘿𝙀𝙊:➠</b> <a href='https://t.me/saktiman55'>ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ᴊᴏɪɴ ♨️</a>
+
+<b>©️ direct file:</b> <a href='https://t.me/thunderfyu'>𝐖𝐎𝐍𝐄𝐑</a>
 """
     IMDB_TEMPLATE_TXT = """
 <b>🏷 Title</b>: <a href={url}>{title}</a>
