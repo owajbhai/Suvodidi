@@ -211,8 +211,8 @@ class script(object):
 ꜰɪʟᴇ ꜱᴛᴏʀᴇ ɪꜱ ᴛʜᴇ ꜰᴇᴀᴛᴜʀᴇ ᴡʜɪᴄʜ ᴡɪʟʟ ᴄʀᴇᴀᴛᴇ ᴀ ꜱʜᴀʀᴇᴀʙʟᴇ ʟɪɴᴋ ᴏꜰ ᴀ ꜱɪɴɢʟᴇ ᴏʀ ᴍᴜʟᴛɪᴘʟᴇ ꜰɪʟᴇꜱ
 
 <u>ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅꜱ</u>:
-• /batch - ᴛᴏ ᴄʀᴇᴀᴛᴇ ᴍᴜʟᴛɪᴘʟᴇ ꜰɪʟᴇ ꜱᴛᴏʀᴇ ʟɪɴᴋ.
-• /link - ᴛᴏ ᴄʀᴇᴀᴛᴇ ᴀ ꜱɪɴɢʟᴇ ꜰɪʟᴇ ꜱᴛᴏʀᴇ ʟɪɴᴋ.
+• /bach - ᴛᴏ ᴄʀᴇᴀᴛᴇ ᴍᴜʟᴛɪᴘʟᴇ ꜰɪʟᴇ ꜱᴛᴏʀᴇ ʟɪɴᴋ.
+• /lik - ᴛᴏ ᴄʀᴇᴀᴛᴇ ᴀ ꜱɪɴɢʟᴇ ꜰɪʟᴇ ꜱᴛᴏʀᴇ ʟɪɴᴋ.
 • /pbatch - ᴊᴜꜱᴛ ʟɪᴋᴇ /batch, ʙᴜᴛ ᴛʜᴇ ꜰɪʟᴇ ᴡɪʟʟ ʙᴇ ꜱᴇɴᴅ ᴡɪᴛʜ ꜰᴏʀᴡᴏʀᴅ ʀᴇꜱᴛʀɪᴄᴛɪᴏɴ.
 • /plink - ᴊᴜꜱᴛ ʟɪᴋᴇ /link, ʙᴜᴛ ᴛʜᴇ ꜰɪʟᴇ ᴡɪʟʟ ʙᴇ ꜱᴇɴᴅ ᴡɪᴛʜ ꜰᴏʀᴡᴏʀᴅ ʀᴇꜱᴛʀɪᴄᴛɪᴏɴ."""
     
@@ -312,10 +312,10 @@ Mᴇꜱꜱᴀɢᴇ : <b>{}</b>"""
     CAPTION = """📂 <b>Filename:</b> <a href='https://t.me/+0FJKbf5PpWs1MTY1'>{file_name}</a>
 sɪᴢᴇ ⚙️: {file_size}
 •────•────✦✗✦───•────•
-📌 <b>ʀᴇǫᴜᴇsᴛ ɢʀᴏᴜᴘ :➠</b> <a href='https://t.me/+aAmjR1AgZmRlOGJl'>ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ᴊᴏɪɴ ✨</a>
+📌 <b>ʀᴇǫᴜᴇsᴛ ɢʀᴏᴜᴘ :➠</b> <a href='https://t.me/movie_Golden'>ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ᴊᴏɪɴ ✨</a>
 🎬 <b>ᴍᴏᴠɪᴇs ᴄʜᴀɴɴᴇʟ :➠</b> <a href='https://t.me/MOVIES_WORLDZSS'>ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ᴊᴏɪɴ ♨️</a>
 •────•────✦✗✦───•────•
-<b>©️ 18+ Video 👉:</b> <a href='https://t.me/Adultjon1_bot'>18+ Video free</a>
+<b>©️ 18+ 𝙑𝙄𝘿𝙀𝙊 𝙇𝙀𝘼𝙆🔞 👉:</b> <a href='https://t.me/saktiman55'>18+ Video free</a>
 """
     IMDB_TEMPLATE_TXT = """
 <b>🏷 Title</b>: <a href={url}>{title}</a>
